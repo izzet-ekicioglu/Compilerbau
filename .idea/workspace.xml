@@ -8,17 +8,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9cb69e8b-700a-40d5-971a-14b25f085a63" name="Changes" comment="Scanner 0.1">
+    <list default="true" id="9cb69e8b-700a-40d5-971a-14b25f085a63" name="Changes" comment="Scanner 0.2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/thm/mni/compilerbau/phases/_01_scanner/Scanner.flex" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thm/mni/compilerbau/phases/_01_scanner/Scanner.flex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/thm/mni/compilerbau/phases/_02_03_parser/parser.cup" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thm/mni/compilerbau/phases/_02_03_parser/parser.cup" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/thm/mni/compilerbau/phases/_01_scanner/Scanner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/thm/mni/compilerbau/phases/_01_scanner/Scanner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/thm/mni/compilerbau/phases/_02_03_parser/Parser$CUP$Parser$actions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/thm/mni/compilerbau/phases/_02_03_parser/Parser$CUP$Parser$actions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/thm/mni/compilerbau/phases/_02_03_parser/Parser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/thm/mni/compilerbau/phases/_02_03_parser/Parser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/thm/mni/compilerbau/phases/_02_03_parser/Sym.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/thm/mni/compilerbau/phases/_02_03_parser/Sym.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/cup/de/thm/mni/compilerbau/phases/_02_03_parser/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/cup/de/thm/mni/compilerbau/phases/_02_03_parser/Parser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/cup/de/thm/mni/compilerbau/phases/_02_03_parser/Sym.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/cup/de/thm/mni/compilerbau/phases/_02_03_parser/Sym.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/jflex/de/thm/mni/compilerbau/phases/_01_scanner/Scanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/jflex/de/thm/mni/compilerbau/phases/_01_scanner/Scanner.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +92,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1686050191062</updated>
-      <workItem from="1686050192563" duration="14573000" />
+      <workItem from="1686050192563" duration="15569000" />
     </task>
     <task id="LOCAL-00001" summary="First Upload">
       <created>1686051034845</created>
@@ -131,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686056879641</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Scanner 0.2">
+      <created>1686069466451</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1686069466451</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,7 +150,8 @@
     <MESSAGE value="First Upload" />
     <MESSAGE value="Korrektur" />
     <MESSAGE value="Scanner 0.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Scanner 0.1" />
+    <MESSAGE value="Scanner 0.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Scanner 0.2" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
