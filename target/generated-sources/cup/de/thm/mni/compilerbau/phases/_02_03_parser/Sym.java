@@ -23,15 +23,15 @@ public interface Sym {
   public static final int LBRACK = 2;
   public static final int IF = 28;
   public static final int REF = 26;
-  public static final int COLON = 20;
+  public static final int COLON = 19;
   public static final int LPAREN = 4;
   public static final int GT = 10;
   public static final int OF = 25;
   public static final int LE = 9;
   public static final int INTLIT = 32;
   public static final int TYPE = 22;
-  public static final int SEMIC = 21;
-  public static final int COMMA = 19;
+  public static final int SEMIC = 20;
+  public static final int COMMA = 21;
   public static final int EOF = 0;
   public static final int GE = 11;
   public static final int MINUS = 15;
@@ -61,9 +61,9 @@ public interface Sym {
   "STAR",
   "SLASH",
   "ASGN",
-  "COMMA",
   "COLON",
   "SEMIC",
+  "COMMA",
   "TYPE",
   "PROC",
   "ARRAY",

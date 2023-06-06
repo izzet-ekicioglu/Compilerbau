@@ -42,7 +42,7 @@ parser code {:
 terminal LBRACK, RBRACK, LPAREN, RPAREN, LCURL, RCURL;         //Braces, parenthesis, brackets
 terminal LT, LE, GT, GE, NE, EQ;                               //Comparison operators
 terminal PLUS, MINUS, STAR, SLASH;                             //Arithmetic operators
-terminal ASGN, COMMA, COLON, SEMIC;                            //Other delimiters
+terminal ASGN, COLON, SEMIC, COMMA;                            //Other delimiters
 terminal TYPE, PROC, ARRAY, OF, REF, VAR, IF, ELSE, WHILE;     //Keywords
 
 terminal Identifier IDENT;    //Identifiers
@@ -51,6 +51,36 @@ terminal Integer INTLIT;      //Integer literals
 /* Non-terminals */
 non terminal Program program;
 
-start with program;
+non terminal            expr_list;
+non terminal Integer    expr;      // used to store evaluated subexpressions
+
+/* Precedences */
+precedence left PLUS, MINUS;
+precedence left STAR;
+
+/* The grammar rules */
+
+/*
+expr_list ::= expr_list expr:e SEMI         {: System.out.println(e);:}
+            | expr:e SEMI                   {: System.out.println(e);:}
+;
+*/
+
+expr      ::= expr:e1 PLUS  expr:e2         {: RESULT = e1+e2;       :}
+             | expr:e1 MINUS expr:e2        {: RESULT = e1-e2;       :}
+             | expr:e1 STAR expr:e2        {: RESULT = e1*e2;       :}
+             //| MINUS expr:e                 {: RESULT = -e;          :}
+  	     //%prec UMINUS
+       | LPAREN expr:e RPAREN	         {: RESULT = e;           :}
+       | INTLIT:n	                     {: RESULT = n;           :}
+             ;
+
+//start with program;
 
 program ::= INTLIT; //TODO (assignment 2 and 3): Just a dummy, needs to be replaced by the actual spl grammar.
+
+
+/*
+ressources:
+http://www2.cs.tum.edu/projects/cup/
+*/
