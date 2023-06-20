@@ -44,35 +44,37 @@ terminal LT, LE, GT, GE, NE, EQ;                               //Comparison oper
 terminal PLUS, MINUS, STAR, SLASH;                             //Arithmetic operators
 terminal ASGN, COLON, SEMIC, COMMA;                            //Other delimiters
 terminal TYPE, PROC, ARRAY, OF, REF, VAR, IF, ELSE, WHILE;     //Keywords
-
 terminal Identifier IDENT;    //Identifiers
 terminal Integer INTLIT;      //Integer literals
 
 /* Non-terminals */
 non terminal Program program;
+non terminal List<GlobalDeclarations> GlobalDeclarationList;
 
-non terminal            expr_list;
-non terminal Integer    expr;      // used to store evaluated subexpressions
+non terminal            expr_list, expr_part;
+non terminal Integer    expr;
 
 /* Precedences */
 precedence left PLUS, MINUS;
-precedence left STAR;
+precedence left STAR, SLASH;
 
 /* The grammar rules */
 
-/*
-expr_list ::= expr_list expr:e SEMI         {: System.out.println(e);:}
-            | expr:e SEMI                   {: System.out.println(e);:}
-;
-*/
+program ::= GlobalDeclarationList;
 
-expr      ::= expr:e1 PLUS  expr:e2         {: RESULT = e1+e2;       :}
-             | expr:e1 MINUS expr:e2        {: RESULT = e1-e2;       :}
-             | expr:e1 STAR expr:e2        {: RESULT = e1*e2;       :}
-             //| MINUS expr:e                 {: RESULT = -e;          :}
-  	     //%prec UMINUS
-       | LPAREN expr:e RPAREN	         {: RESULT = e;           :}
-       | INTLIT:n	                     {: RESULT = n;           :}
+
+
+expr_list ::= expr_list expr:e SEMIC    {: System.out.println(e);:}
+             | expr:e SEMIC             {: System.out.println(e);:}
+             ;
+
+
+expr      ::= expr:e1 PLUS  expr:e2     {: RESULT = new Integer(e1.intValue() + e2.intValue()); :}
+             | expr:e1 MINUS expr:e2    {: RESULT = new Integer(e1.intValue() - e2.intValue()); :}
+             | expr:e1 STAR expr:e2     {: RESULT = new Integer(e1.intValue() * e2.intValue()); :}
+             | expr:e1 SLASH expr:e2    {:RESULT = new Integer(e1.intValue() / e2.intValue()); :}
+             | LPAREN expr:e RPAREN	    {: RESULT = e; :}
+             | INTLIT:n	                {: RESULT = n; :}
              ;
 
 //start with program;
